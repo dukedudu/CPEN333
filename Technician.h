@@ -12,7 +12,7 @@
 #define OI 2
 #define OF 3
 #define TY 4
-//first
+
 class Recep;
 class Tech {
 private:
@@ -110,14 +110,14 @@ public:
 
 	void checkTyresforwear(int x) {
 		assert(x >= 0 && x <= 3);
-		printf("used percentage: %d\n", Techcar->ShowTyre(x));
+		printf("Tyre:%d's used percentage: %d\n", x, Techcar->ShowTyre(x));
 		if (Techcar->ShowTyre(x) > 50) {
 			printf("Tyre %d is broken...\n", x);
 			SwapTyre(x);
 			printf("SwapTyre %d succeed...\n", x);
 		}
 		else {
-			printf("Tyre %d ok\n", x);
+			printf("Tyre %d is ok, does not need to change..\n", x);
 			return;
 		}
 		
